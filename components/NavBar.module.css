@@ -1,0 +1,172 @@
+.navbar {
+    user-select: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 4rem;
+    max-height: 4rem;
+
+    padding: 0px;
+
+    display: flex;
+    z-index: 1000;
+
+    background-color: var(--blured-bg-color);
+    border-bottom: var(--border-width) solid var(--border-color);
+}
+.container {
+    max-width: 1000px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 2rem;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+
+    align-items: center;
+    text-align: center;
+
+    color: var(--text-color);
+}
+.notsokodya {
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    background-color: transparent;
+    color: var(--primary-color);
+    transition: .125s;
+}
+.notsokodya > span {
+    padding: .1rem .15rem;
+    margin-left: .1rem;
+
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transition: .125s;
+}
+.title:hover > .notsokodya {
+    color: var(--primary-tint-color);
+}
+.title:hover > .notsokodya > span {
+    background-color: var(--primary-tint-color);
+}
+.title img {
+    width: 2rem;
+    height: 2rem;
+}
+.links {
+    display: flex;
+    flex-direction: row;
+}
+.links svg {
+    display: none;
+}
+.hambuger {
+    width: 2.7rem;
+    height: 2.7rem;
+    padding: .5rem;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100%;
+
+    cursor: pointer;
+    background: transparent;
+    border: none;
+
+    transition: .125s background-color ease-out;
+}
+.hambuger:hover {
+    background-color: var(--border-color);
+}
+.hambuger > svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.navLink {
+    padding: 0px 1rem;
+    color: var(--text-color);
+}
+.navLink:hover {
+    color: var(--primary-color);
+}
+.navLink:is(.active) {
+    color: var(--primary-color);
+}
+.navLink:is(.active):hover {
+    color: var(--primary-tint-color);
+}
+
+.placeholder {
+    width: 100%;
+    height: 4rem;
+    max-height: 4rem;
+}
+
+.__modal {
+    justify-content: center;
+    align-items: start;
+}
+.__modal > div {
+    position: absolute;
+    top: 20%;
+    width: 70%;
+}
+.__modal > div > div {
+    padding: 2rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.__modal .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.__modal .links a {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+.__modal .links svg {
+    display: inline;
+    font-size: 1.5rem;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .navbar {
+        backdrop-filter: blur(8px);
+    }
+}
+
+@media screen and (width <= 700px) {
+    .navbar > .container > .links {
+        display: none;
+    }
+    .hambuger {
+        display: flex;
+    }
+}

@@ -1,0 +1,29 @@
+.modal__body {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+
+    backdrop-filter: blur(0px);
+    transition: .1s background-color ease-out, .15s opacity ease-out, .15s visibility ease-out, .1s backdrop-filter ease-out;
+    z-index: 100000;
+}
+.modal__body > div {
+    width: fit-content;
+    height: 0px;
+}
+.modal__body:is(.active) {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+    background-color: hsla(var(--background-color-hsl), .75);
+    visibility: visible;
+}

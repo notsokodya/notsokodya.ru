@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap');
+
+/*------------------- Main -------------------*/
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    line-height: inherit;
+    text-align: left;
+}
+
+html {
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    font-family: Roboto Mono, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+
+    tab-size: 4;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    scrollbar-color: var(--primary-color) var(--background-color) !important;
+    scrollbar-width: thin !important;
+}
+
+::selection {
+    background: var(--primary-color) !important;
+    color: var(--background-color) !important;
+}
+
+#__next {
+    height: 100vh;
+}
+
+/*------------------- Variables -------------------*/
+
+:root {
+    color-scheme: dark;
+    /*------- Theme Variables -------*/
+
+    --primary-color:        var(--light-wisteria-500);
+    --primary-shade-color:  var(--light-wisteria-600);
+    --primary-tint-color:   var(--light-wisteria-400);
+
+    --text-color:           var(--neutral-200);
+    --text-darker-color:    var(--neutral-300);
+    --text-lighter-color:   var(--neutral-100);
+    --text-hover-color:     var(--text-lighter-color);
+    --text-disabled-color:  var(--text-darker-color);
+
+    --background-color:     var(--neutral-900);
+    --background-color-hsl: var(--neutral-900-hsl);
+
+    --border-width:         2px;
+    --border-color:         hsla(var(--neutral-800-hsl), 0.5);
+    --border-shade-color:   hsla(var(--neutral-900-hsl), 0.3);
+    --border-tint-color:    hsla(var(--neutral-700-hsl), 0.5);
+    --border-radius:        8px;
+
+    --blured-bg-color:      hsla(var(--background-color-hsl), 0.75);
+
+    /*----- Colors Variables -----*/
+
+    --neutral-50: #fafafa;
+    --neutral-100: #f5f5f5;
+    --neutral-200: #e5e5e5;
+    --neutral-300: #d4d4d4;
+    --neutral-400: #a3a3a3;
+    --neutral-500: #737373;
+    --neutral-600: #525252;
+    --neutral-700: #404040;
+    --neutral-800: #262626;
+    --neutral-900: #171717;
+    --neutral-950: #0a0a0a;
+    
+    --neutral-50-hsl: 0, 0%, 98%;
+    --neutral-100-hsl: 0, 0%, 96%;
+    --neutral-200-hsl: 0, 0%, 90%;
+    --neutral-300-hsl: 0, 0%, 83%;
+    --neutral-400-hsl: 0, 0%, 64%;
+    --neutral-500-hsl: 0, 0%, 45%;
+    --neutral-600-hsl: 0, 0%, 32%;
+    --neutral-700-hsl: 0, 0%, 25%;
+    --neutral-800-hsl: 0, 0%, 15%;
+    --neutral-900-hsl: 0, 0%, 9%;
+    --neutral-950-hsl: 0, 0%, 4%;
+
+    --light-wisteria-50: #fcf7fd;
+    --light-wisteria-100: #f7edfa;
+    --light-wisteria-200: #f0def6;
+    --light-wisteria-300: #e4c4ee;
+    --light-wisteria-400: #daaee6;
+    --light-wisteria-500: #c179d3;
+    --light-wisteria-600: #ae5cc1;
+    --light-wisteria-700: #9648a8;
+    --light-wisteria-800: #7d3f8a;
+    --light-wisteria-900: #66346f;
+    --light-wisteria-950: #481c4f;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    :root {
+        --blured-bg-color: hsla(var(--background-color-hsl), 0.4);
+    }
+}
+
+/*------------------- Other -------------------*/
+
+a {
+    color:                  var(--primary-color);
+    text-decoration:        none;
+    text-decoration-color:  var(--primary-tint-color);
+    transition:             .125s;
+}
+a:hover {
+    color:                  var(--primary-tint-color);
+}
+
+code {
+    padding: .2rem .3rem;
+
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Roboto Mono, monospace;
+
+    color: var(--zinc-700);
+    background-color: var(--zinc-950);
+}
+
+br {
+    line-height: 200%;
+}
+hr {
+    border: solid 1px var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+
+h1, h2, h3, h4 {
+    width: fit-content;
+    padding: .1rem .4rem;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+}
