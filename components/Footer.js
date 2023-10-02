@@ -10,7 +10,7 @@ export default function Footer() {
                     <span>notsokodya</span>
                     <span>
                         made with love &lt;3
-                        <Link href="https://github.com/notsokodya/website">
+                        <Link href="https://github.com/notsokodya/notsokodya.ru">
                             <SiGithub/>
                         </Link>
                     </span>
